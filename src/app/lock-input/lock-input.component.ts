@@ -16,7 +16,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 export class LockInputComponent implements OnInit, ControlValueAccessor {
   value!: boolean;
   disabled = false;
-  onChange!: (value: boolean) => void;
+  onChange: (value: boolean) => void = () => {};
   onTouched!: () => void;
 
   constructor() {}

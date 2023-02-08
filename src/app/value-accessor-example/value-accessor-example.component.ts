@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormControlState, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-value-accessor-example',
@@ -8,13 +8,14 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 })
 export class ValueAccessorExampleComponent implements OnInit {
   form!: FormGroup;
+  data: FormControlState<boolean> = { value: true, disabled: false };
 
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
     this.form = this.fb.group({
       itemName: new FormControl(),
-      isLocked: new FormControl({ value: true, disabled: false })
+      isLocked: new FormControl(this.data)
     })
   }
 
