@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 
 import { ValueAccessorModule } from './value-accessor/value-accessor.module';
+import { PatternBridgeModule } from './pattern-bridge/pattern-bridge.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,7 +15,8 @@ import { ValueAccessorModule } from './value-accessor/value-accessor.module';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    ValueAccessorModule
+    ValueAccessorModule,
+    PatternBridgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
